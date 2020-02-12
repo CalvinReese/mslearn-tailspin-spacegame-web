@@ -1,17 +1,17 @@
 trigger:
   - '*'
   
-  pool:
+pool:
     vmImage: 'ubuntu-16.04'
     demands:
       - npm
   
-  variables:
+variables:
     buildConfiguration: 'Release'
     wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
     dotnetSdkVersion: '2.1.500'
   
-  steps:
+steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
     inputs:
